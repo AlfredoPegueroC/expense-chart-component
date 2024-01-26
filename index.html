@@ -7,6 +7,12 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
   <body>
@@ -22,19 +28,8 @@
           <article class="chart flex">
             <h2 class="chart__title">Spending - Last 7 days</h2>
 
-            <div class="chart__container" id="days">
-              <!-- <div class="chart__wrapper flex">
-                <div class="day">
-                  <div class="bar"></div>
-                  <div class="mon">mon</div>
-                </div>
-                <div>wed</div>
-                <div>wed</div>
-                <div>thu</div>
-                <div>fri</div>
-                <div>sat</div>
-                <div>sun</div>
-              </div> -->
+            <div class="chart__container">
+              <div class="chart__wrapper flex" id="days"></div>
             </div>
             <footer class="chart__footer flex">
               <h3 class="total">Total this month <span>$478.33</span></h3>

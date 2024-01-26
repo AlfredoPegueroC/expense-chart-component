@@ -28,6 +28,7 @@ body {
   margin: 0;
   min-height: 100dvh;
   background: var(--clr-neutral-Cream);
+  font-family: 'DM Sans', sans-serif;
 }
 h1,
 h2,
@@ -98,26 +99,48 @@ p {
 .chart__wrapper {
   color: var(--clr-neutral-MediumBrown);
   align-items: self-end;
-  justify-content: center;
-  padding: 1rem;
-  gap: .5rem;
-  height: 20vh;
-  max-width: 12vw;
+  gap: 0.5rem;
+  padding: 2rem;
 }
-.day {
+
+@media(min-width: 450px){
+  .chart__wrapper {
+    gap: 1rem;
+  }
+}
+
+.day{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 .bar {
+  position: relative;
   background: var(--clr-primary-SoftRed);
   max-height: 30vh;
   width: 35px;
   border-radius: 0.2rem;
 }
+.bar.active{
+  background: var(--clr-primary-Cyan);
+}
+.bar.active:hover{
+  background: hsla(186, 34%, 60%, 0.5);
+}
+.bar:hover::before{
+  content:attr(data-before);
+  position: absolute;
+  top: -2.5rem;
+  right: -10px;
+  font-size: 0.9rem;
+  padding: .5rem;
+  border-radius: 0.2rem;
+  background: var(--clr-neutral-DarkBrown);
+  color: var(--clr-neutral-VeryPaleOrange);
+}
 .bar:hover{
   cursor: pointer;
-  background: var(--clr-primary-Cyan);
+  background: hsla(10, 79%, 65%, 0.5);
 }
 .chart__footer {
   margin-top: 1rem;
